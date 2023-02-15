@@ -69,11 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ]),
             ),
           ),
-          Column(
-            children: transactions.map((tx) {
+          Expanded(
+              child: ListView.builder(
+            itemBuilder: (ctx, ind) {
+              Transaction tx = transactions[ind];
               return TransactEntry(tx.amount, tx.title, tx.date);
-            }).toList(),
-          )
+            },
+            itemCount: transactions.length,
+          ))
         ],
       ),
       floatingActionButton: FloatingActionButton(
