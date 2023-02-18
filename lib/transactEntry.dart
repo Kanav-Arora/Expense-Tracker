@@ -19,7 +19,7 @@ class TransactEntry extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              "\$$amount",
+              "\$${amount.toStringAsFixed(2)}",
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
             Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
